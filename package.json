@@ -1,0 +1,36 @@
+{
+  "name": "pixelperfect-graphix-subscription",
+  "version": "1.0.0",
+  "description": "Professional Graphics Design Subscription Website with Razorpay UPI AutoPay",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build required'",
+    "start": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "graphics-design",
+    "subscription",
+    "razorpay",
+    "upi-autopay",
+    "templates",
+    "vercel"
+  ],
+  "author": "PixelPerfect Graphix",
+  "license": "MIT",
+  "dependencies": {
+    "razorpay": "^2.9.2"
+  },
+  "devDependencies": {
+    "vercel": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/pixelperfect-subscription.git"
+  },
+  "homepage": "https://pixelperfectgraphix.vercel.app"
+}
