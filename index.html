@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPerfect Graphix - Subscription Plans</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="fas fa-palette"></i>
+                    <span>PixelPerfect Graphix</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professional Graphics Design</h1>
+                <h2>Subscription के साथ</h2>
+                <p>किफायती monthly, quarterly और annual plans के साथ unlimited premium templates पाएं। UPI Auto-Pay के साथ hassle-free payments।</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">Premium Templates</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+                <a href="#pricing" class="btn btn-primary">Choose Your Plan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Messages -->
+    <div id="successMessage" class="message success-message">
+        <div class="container">
+            <i class="fas fa-check-circle"></i>
+            <div>
+                <h3>🎉 Payment Successful!</h3>
+                <p>आपका subscription activate हो गया है। Welcome to PixelPerfect Graphix!</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="errorMessage" class="message error-message">
+        <div class="container">
+            <i class="fas fa-exclamation-circle"></i>
+            <div>
+                <h3>❌ Payment Failed</h3>
+                <p id="errorText">कुछ गलत हुआ है। कृपया दोबारा कोशिश करें।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Perfect Plan</h2>
+                <p>सभी plans में UPI AutoPay और unlimited downloads शामिल हैं</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Monthly Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Monthly Plan</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">49</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-desc">Perfect for small businesses</p>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i>1000+ Premium Templates</li>
+                        <li><i class="fas fa-check"></i>Commercial License</li>
+                        <li><i class="fas fa-check"></i>Instant Download</li>
+                        <li><i class="fas fa-check"></i>Canva Compatible</li>
+                        <li><i class="fas fa-check"></i>Email Support</li>
+                        <li><i class="fas fa-check"></i>48hr Delivery</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="handleSubscription('monthly', 49)">
+                        <i class="fas fa-credit-card"></i>
+                        Subscribe Now
+                    </button>
+                    <div class="upi-badges">
+                        <span class="upi-badge">GPay</span>
+                        <span class="upi-badge">PhonePe</span>
+                        <span class="upi-badge">PayTM</span>
+                        <span class="upi-badge">BHIM</span>
+                    </div>
+                </div>
+
+                <!-- Quarterly Plan -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Quarterly Plan</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">99</span>
+                            <span class="period">/quarter</span>
+                        </div>
+                        <div class="savings">Save ₹48/year</div>
+                        <p class="plan-desc">Best value for growing businesses</p>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i>3000+ Premium Templates</li>
+                        <li><i class="fas fa-check"></i>Commercial License</li>
+                        <li><i class="fas fa-check"></i>Priority Download</li>
+                        <li><i class="fas fa-check"></i>Canva Compatible</li>
+                        <li><i class="fas fa-check"></i>Priority Support</li>
+                        <li><i class="fas fa-check"></i>24hr Delivery</li>
+                        <li><i class="fas fa-check"></i>Brand Guidelines</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="handleSubscription('quarterly', 99)">
+                        <i class="fas fa-credit-card"></i>
+                        Subscribe Now
+                    </button>
+                    <div class="upi-badges">
+                        <span class="upi-badge">GPay</span>
+                        <span class="upi-badge">PhonePe</span>
+                        <span class="upi-badge">PayTM</span>
+                        <span class="upi-badge">BHIM</span>
+                    </div>
+                </div>
+
+                <!-- Annual Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Annual Plan</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">299</span>
+                            <span class="period">/year</span>
+                        </div>
+                        <div class="savings">Save ₹289/year</div>
+                        <p class="plan-desc">Maximum value for enterprises</p>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i>5000+ Premium Templates</li>
+                        <li><i class="fas fa-check"></i>Commercial License</li>
+                        <li><i class="fas fa-check"></i>Instant Download</li>
+                        <li><i class="fas fa-check"></i>Canva Compatible</li>
+                        <li><i class="fas fa-check"></i>24/7 Priority Support</li>
+                        <li><i class="fas fa-check"></i>Same Day Delivery</li>
+                        <li><i class="fas fa-check"></i>Brand Guidelines</li>
+                        <li><i class="fas fa-check"></i>Custom Templates</li>
+                        <li><i class="fas fa-check"></i>Dedicated Manager</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="handleSubscription('annual', 299)">
+                        <i class="fas fa-credit-card"></i>
+                        Subscribe Now
+                    </button>
+                    <div class="upi-badges">
+                        <span class="upi-badge">GPay</span>
+                        <span class="upi-badge">PhonePe</span>
+                        <span class="upi-badge">PayTM</span>
+                        <span class="upi-badge">BHIM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose PixelPerfect Graphix?</h2>
+                <p>सबसे बेहतरीन features और service</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>UPI AutoPay</h3>
+                    <p>Automatic payments through all UPI apps. Setup once, enjoy forever.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-download"></i>
+                    <h3>Unlimited Downloads</h3>
+                    <p>Download as many templates as you need. No restrictions, no limits.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Professional Quality</h3>
+                    <p>All templates designed by professional designers with years of experience.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Quick Delivery</h3>
+                    <p>Fast turnaround times based on your subscription plan.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-edit"></i>
+                    <h3>Easy Customization</h3>
+                    <p>All templates work seamlessly with Canva for easy editing.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Get help whenever you need it with our dedicated support team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions? We're here to help!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>palgunnao@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 XXXXX XXXXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Support Hours</h4>
+                            <p>24/7 Available</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security">
+        <div class="container">
+            <div class="security-badges">
+                <div class="security-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>256-bit SSL Encrypted</span>
+                </div>
+                <div class="security-badge">
+                    <i class="fas fa-university"></i>
+                    <span>RBI Approved</span>
+                </div>
+                <div class="security-badge">
+                    <i class="fas fa-lock"></i>
+                    <span>PCI DSS Compliant</span>
+                </div>
+                <div class="security-badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>Secure Payments</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-palette"></i>
+                        <span>PixelPerfect Graphix</span>
+                    </div>
+                    <p>Professional graphics design subscription service with unlimited downloads and premium templates.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">License</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PixelPerfect Graphix. All rights reserved. Powered by Razorpay.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Processing payment...</p>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
